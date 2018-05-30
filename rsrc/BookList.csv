@@ -1,0 +1,144 @@
+SUBJECT,Course #,Course Description,ISBN,Used,E-book
+English,106,Reasons for Writing,9780140424393,FALSE,FALSE
+English,106,Reasons for Writing,9780141439518,FALSE,FALSE
+English,106,Reasons for Writing,9780226899152,TRUE,FALSE
+English,121,Short Story,9780374508043,TRUE,FALSE
+English,141,Fiction Writing,9780743235273,TRUE,FALSE
+English,156,Shakespeare: Language and the Self,9780143130239,FALSE,FALSE
+English,156,Shakespeare: Language and the Self,9780143130215,FALSE,FALSE
+English,156,Shakespeare: Language and the Self,9780140714531,FALSE,FALSE
+English,156,Shakespeare: Language and the Self,9780143128595,FALSE,FALSE
+History,201,Ancient History,9780393614312,FALSE,TRUE
+History,201,Ancient History,9780872207271,FALSE,FALSE
+History,201,Ancient History,9781457690884,TRUE,TRUE
+History,201,Ancient History,9780631217848,FALSE,FALSE
+History,201,Ancient History,9780199978458,FALSE,FALSE
+History,201,Ancient History,0872205428,FALSE,FALSE
+History,202,Medieval History,,FALSE,FALSE
+History,203,United States History,9780393930276,TRUE,FALSE
+History,203,United States History,9780393930283,TRUE,FALSE
+History,203,United States History,9780809001583,FALSE,FALSE
+History,221,City of Boston,9780394746166,FALSE,FALSE
+History,232,Modern European History,9780060890728,TRUE,TRUE
+History,232,Modern European History,9780393614329,TRUE,TRUE
+History,232,Modern European History,9781111837174,TRUE,TRUE
+History,232,Modern European History,9780803226616,FALSE,FALSE
+History,232,Modern European History,9781457690884,TRUE,TRUE
+History,232,Modern European History,9780547086330,TRUE,FALSE
+History,232,Modern European History,9780195171570,TRUE,TRUE
+History,240,Empires and Nationalism,9781405859370,TRUE,TRUE
+History,240,Empires and Nationalism,9780060890728,TRUE,TRUE
+History,240,Empires and Nationalism,9780674009943,TRUE,TRUE
+History,240,Empires and Nationalism,9780300143331,TRUE,TRUE
+History,240,Empires and Nationalism,9780393329681,TRUE,TRUE
+History,240,Empires and Nationalism,9780691152363,TRUE,TRUE
+History,240,Empires and Nationalism,9780812991789,FALSE,FALSE
+History,245,History of Modern East Asia,9780393934519,TRUE,FALSE
+History,245,History of Modern East Asia,9780393920857,TRUE,FALSE
+History,245,History of Modern East Asia,9780395496961,TRUE,FALSE
+History,248,Modern Islamic Societies,,FALSE,FALSE
+Humanities,231,Economics,9781305280595,TRUE,TRUE
+Humanities,231,Economics,9780393352245,TRUE,TRUE
+Humanities,231,Economics,9780393337648,FALSE,FALSE
+Humanities,249,Politics & Policy ,9781633693784,TRUE,FALSE
+Humanities,249,Politics & Policy ,9780465096206,FALSE,FALSE
+Humanities,249,Politics & Policy ,9781476769905,TRUE,FALSE
+Humanities,249,Politics & Policy ,9780716711728,FALSE,FALSE
+Humanities,401,Language & Ethics ,9781608439737,TRUE,TRUE
+Humanities,402,Readings in Ethics,9780451528445,TRUE,FALSE
+Humanities,402,Readings in Ethics,9780374532505,TRUE,FALSE
+Humanities,402,Readings in Ethics,9780679732761,TRUE,FALSE
+Humanities,402,Readings in Ethics,9780062300546,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9780684829463,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9780812974447,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9780062229267,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9780393062496,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9780465083619,TRUE,FALSE
+Humanities,421,Psychology: Special Topics,9781464140815,FALSE,FALSE
+Humanities,432,Film Analysis: World Cinema,9780073535104,TRUE,FALSE
+Humanities,800,Health & Community,9780393344516,TRUE,FALSE
+Humanities,800,Health & Community,9780812929904,TRUE,FALSE
+Language,301,French 1,9780073535449,TRUE,FALSE
+Language,301,French 1,9780077412708,FALSE,FALSE
+Language,301,French 1,9780553274110,TRUE,FALSE
+Language,302,French 2,9780073535449,TRUE,FALSE
+Language,302,French 2,9780077412708,TRUE,FALSE
+Language,302,French 2,9780553274110,TRUE,FALSE
+Language,302,French 2,9780934034371,TRUE,FALSE
+Language,302,French 2,9780130340429,TRUE,FALSE
+Language,302,French 2,9782253005254,TRUE,FALSE
+Language,303,French 3,9780759398092,TRUE,FALSE
+Language,303,French 3,9780553274110,TRUE,FALSE
+Language,303,French 3,9780155950061,TRUE,FALSE
+Language,303,French 3,9782070360024,TRUE,FALSE
+Language,303,French 3,9782203001121,TRUE,FALSE
+Language,304,French 4,9780878402250,TRUE,FALSE
+Language,304,French 4,9782707301482,TRUE,FALSE
+Language,304,French 4,9782070447985,TRUE,FALSE
+Language,304,French 4,9782203001138,TRUE,FALSE
+Language,305,French 4 Literature,9780245531736,TRUE,FALSE
+Language,305,French 4 Literature,2030346675,TRUE,FALSE
+Language,305,French 4 Literature,9782080706577,TRUE,FALSE
+Language,305,French 4 Literature,2264003790,TRUE,FALSE
+Language,321,Spanish 1,9788415846888,TRUE,FALSE
+Language,321,Spanish 1,9788415846772,TRUE,FALSE
+Language,321,Spanish 1,9788415640103,TRUE,FALSE
+Language,322,Spanish 2,9788415640103,TRUE,FALSE
+Language,322,Spanish 2,9788415640110,TRUE,FALSE
+Language,323,Spanish 3,9788437627205,TRUE,FALSE
+Language,324,Spanish 4 Literature,9780452280045,TRUE,FALSE
+Language,324,Spanish 4 Literature,9780679756774,TRUE,FALSE
+Language,324,Spanish 4 Literature,9780547250311,TRUE,FALSE
+Language,324,Spanish 4 Literature,9780307949172,TRUE,FALSE
+Language,324,Spanish 4 Literature,9780345391391,TRUE,FALSE
+Language,330,Spanish 5,9780307474728,TRUE,FALSE
+Language,330,Spanish 5,9780679755456,TRUE,FALSE
+Language,330,Spanish 5,9781592328932,TRUE,FALSE
+Language,331,Latin 1,9780133193282,TRUE,FALSE
+Language,332,Latin 2,9780133193282,TRUE,FALSE
+Language,332,Latin 2,9780137973903,TRUE,FALSE
+Language,333,Latin 3,9780198610052,TRUE,FALSE
+Language,333,Latin 3,9780865164314,TRUE,FALSE
+Language,333,Latin 3,9780806142326,TRUE,FALSE
+Language,351,Mandarin 1,9781876739072,TRUE,FALSE
+Language,351,Mandarin 1,9781876739065,TRUE,FALSE
+Language,352,Mandarin 2,9781876739546,TRUE,FALSE
+Language,352,Mandarin 2,B01JXQEQMO,TRUE,FALSE
+Language,353,Mandarin 3,9780887276798,TRUE,FALSE
+Language,353,Mandarin 3,9780887276835,TRUE,FALSE
+Language,354,Mandarin 4,9780887276798,TRUE,FALSE
+Language,354,Mandarin 4,9780887276835,TRUE,FALSE
+Language,358,Mandarin 4B,9780887276798,TRUE,FALSE
+Language,358,Mandarin 4B,9780887276835,TRUE,FALSE
+Science,501,Biology 1,9780133235746,TRUE,FALSE
+Science,502,Biology 2,9780321775658,TRUE,FALSE
+Science,510,Gene Expression & Regulation,,FALSE,FALSE
+Science,521,Chemistry 1 Advanced,9780078021510,TRUE,FALSE
+Science,521,Chemistry 1 Advanced,9781259286223,TRUE,FALSE
+Science,522,Chemistry 1,9780073402758,TRUE,FALSE
+Science,522,Chemistry 1,9780077623319,TRUE,FALSE
+Science,523,Chemistry 2,9780078021510,TRUE,FALSE
+Science,523,Chemistry 2,9781259286223,TRUE,FALSE
+Science,537,Computer Science 3,9781848000698,TRUE,TRUE
+Science,541,Physics 1,9780470879528,TRUE,FALSE
+Science,541,Physics 1,9780470879566,TRUE,FALSE
+Science,551,Physics 1 Accelerated,9780321625922,FALSE,FALSE
+Science,552,Physics 1 Advanced,9780133978049,TRUE,FALSE
+Science,553,Physics 2,9780133978001,TRUE,FALSE
+Science,557,Theory of Relativity,9780486688954,TRUE,FALSE
+Science,557,Theory of Relativity,9781420946338,TRUE,FALSE
+Mathematics,601,Geometry Advanced,,FALSE,FALSE
+Mathematics,602,Geometry,9781881764069,TRUE,FALSE
+Mathematics,610,Intermediate Algebra,9781111567682,TRUE,FALSE
+Mathematics,615,Algebra 2/Precalculus Advanced,9780321644770,TRUE,FALSE
+Mathematics,616,Algebra 2/Precalculus,9780321644770,TRUE,FALSE
+Mathematics,622,Calculus 1 Advanced,9780495011699,TRUE,FALSE
+Mathematics,623,Calculus 1,9780618568062,TRUE,FALSE
+Mathematics,631,Calculus 2,9781305270336,TRUE,FALSE
+Mathematics,631,Calculus 2,9781305272422,TRUE,FALSE
+Mathematics,632,Theoretical Calculus,9780914098911,TRUE,FALSE
+Mathematics,634,Calculus 2 Advanced: Multivariable,9780538497879,TRUE,FALSE
+Mathematics,642,Statistics (1/2 Credit),9781464158933,TRUE,FALSE
+Mathematics,643,Abstract Algebra,9780471368793,TRUE,FALSE
+Mathematics,644,Statistics,9781464158933,TRUE,FALSE
+Mathematics,644,Statistics,9781592404858,TRUE,FALSE
