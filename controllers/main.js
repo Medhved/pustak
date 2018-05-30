@@ -15,7 +15,6 @@ controller.getBookList = function(request, h) {
             );
         });
     });
-    
 }
 
 controller.getTest = function (request, h) {
