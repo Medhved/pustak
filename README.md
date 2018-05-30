@@ -11,10 +11,12 @@ The application will probably change and definitely get fleshed out in more deta
 1. Check to see whether the teacher allows used or e-books for that particular book/edition. If so, then it will be highlighted.
 1. Parents or other students can then say which of these books they want to sell. 
 1. A parent looking for a used book for the next year can then reserve or buy the used book.
+
 ---
 ## Technologies used
-- Node
-- Hapi
+ - Node
+ - Hapi
+ 
 ---
 ## License
 **[MIT](LICENSE)**
