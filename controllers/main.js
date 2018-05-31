@@ -6,7 +6,7 @@ module.exports = (function () {
     return controller;
 }());
 
-controller.getBookList = function(request, h) {
+controller.getBookList = function (request, h) {
 
     return new Promise(function (resolve, reject) {
         fs.readFile(__dirname + '/../rsrc/BookList.csv', 'utf8', (err, data) => {

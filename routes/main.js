@@ -2,17 +2,16 @@
 
 const controller = require('../controllers/main');
 
-module.exports = [
-    {
+module.exports = [{
         method: 'GET',
         path: '/booklist',
         config: {
             description: 'Show Raw Data',
             notes: 'Shows raw data imported from the csv file',
-            tags: ['api','csv','data','books','list']
+            tags: ['api', 'csv', 'data', 'books', 'list']
         },
         handler: controller.getBookList.bind(controller)
-    },    
+    },
     {
         method: 'GET',
         path: "/test",

@@ -6,36 +6,35 @@ const Config = require('config');
 const Routes = require('./routes');
 
 const server = Hapi.Server({
-    host: Config.get('api.host'),
-    port: Config.get('api.port')
+  host: Config.get('api.host'),
+  port: Config.get('api.port'),
 });
 
 const swaggerOptions = {
-    info: {
-        title: 'Test API Documentation'
-    }
+  info: {
+    title: 'Test API Documentation',
+  },
 };
 
-const init = async() => {
+const init = async () => {
+  server.route(Routes);
 
-    server.route(Routes);
+  await server.register([
+    Inert,
+    Vision,
+    {
+      plugin: HapiSwagger,
+      options: swaggerOptions,
+    },
+  ]);
 
-    await server.register([
-        Inert,
-        Vision,
-        {
-            plugin: HapiSwagger,
-            options: swaggerOptions
-        }
-    ] )
-
-    await server.start();
-    console.log(`Server running at ${server.info.uri}`);
+  await server.start();
+  console.log(`Server running at ${server.info.uri}`);
 };
 
 process.on('unhandledRejection', (err) => {
-    console.log(err);
-    process.exit(1);
+  console.log(err);
+  process.exit(1);
 });
 
 init();
