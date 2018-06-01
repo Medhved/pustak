@@ -7,11 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Mono:300" rel="stylesheet">
+  <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-    <app-root></app-root>
+<body class="mat-app-background">
+  <div class="container" fxLayout="row">
+    <div fxFlex="80%" fxFlexOffset="100px">
+      <app-root></app-root>
+
+    </div>
+    <div fxFlex="10%">
+      
+    </div>
+      
+  </div>
+    
   
 </body>
 </html>

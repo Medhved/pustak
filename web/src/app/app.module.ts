@@ -4,11 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+import { BooklistComponent } from './booklist/booklist.component';
+
 import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BooklistComponent
   ],
   imports: [
     BrowserModule,

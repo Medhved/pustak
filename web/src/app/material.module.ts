@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {
+  MatMenuModule,
   MatCardModule,
   MatIconModule,
   MatToolbarModule,
@@ -30,6 +31,7 @@ import { ObserversModule } from '@angular/cdk/observers';
 
 @NgModule({
   imports: [
+    MatMenuModule,
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
@@ -44,6 +46,7 @@ import { ObserversModule } from '@angular/cdk/observers';
     ObserversModule
   ],
   exports: [
+    MatMenuModule,
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
