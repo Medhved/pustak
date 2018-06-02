@@ -1,4 +1,4 @@
-SUBJECT,Course #,Course Description,ISBN,Used,E-book
+subject,course_num,course_desc,isbn,used,eBook
 English,106,Reasons for Writing,9780140424393,FALSE,FALSE
 English,106,Reasons for Writing,9780141439518,FALSE,FALSE
 English,106,Reasons for Writing,9780226899152,TRUE,FALSE

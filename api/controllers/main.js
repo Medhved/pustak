@@ -10,9 +10,25 @@ controller.getBookList = function (request, h) {
 
     return new Promise(function (resolve, reject) {
         fs.readFile(__dirname + '/../rsrc/BookList.csv', 'utf8', (err, data) => {
-            err ? reject(err) : resolve(
-                data.split('\r\n')
-            );
+            if(err) reject(err);
+
+            let arrData = data.split('\r\n');
+            let arrBookList = [];
+
+            let headers = arrData[0].split(',');
+
+            for(let i=1; i<arrData.length; i++) {
+                let objBook = {};
+                let bookData = arrData[i].split(',');
+
+                for(let j=0; j<headers.length; j++) {
+                    objBook[headers[j]] = bookData[j];
+                }
+                    arrBookList.push(objBook);
+            }
+
+            resolve(JSON.stringify(arrBookList));
+            
         });
     });
 }
