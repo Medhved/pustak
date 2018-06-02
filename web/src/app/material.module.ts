@@ -23,7 +23,8 @@ import {
   MatSlideToggleModule,
   MatRippleModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatGridListModule
 } from '@angular/material';
 
 import { PlatformModule } from '@angular/cdk/platform';
@@ -32,6 +33,7 @@ import { ObserversModule } from '@angular/cdk/observers';
 @NgModule({
   imports: [
     MatMenuModule,
+    MatGridListModule,
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
@@ -47,6 +49,7 @@ import { ObserversModule } from '@angular/cdk/observers';
   ],
   exports: [
     MatMenuModule,
+    MatGridListModule,
     MatCardModule,
     MatIconModule,
     MatToolbarModule,

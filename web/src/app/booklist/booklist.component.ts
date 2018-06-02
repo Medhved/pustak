@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
+import { BOOKS } from '../mock-books';
 
 @Component({
   selector: 'app-booklist',
@@ -7,6 +8,8 @@ import { Book } from '../book';
   styleUrls: ['./booklist.component.css']
 })
 export class BooklistComponent implements OnInit {
+
+  books = BOOKS;
 
   book: Book = {
     subject: 'History',
