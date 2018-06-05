@@ -5,7 +5,7 @@
 
 <div fxLayout="row wrap" fxLayoutGap="5">
     <div *ngFor='let book of books' fxFlex="25">
-        <mat-card style="height:95%; max-height: 95%; background-color: #eeeeee;">
+        <mat-card style="height:95%; background-color: #eeeeee;">
             <mat-card-header>
                 <mat-card-title><h3>{{book.subject}}</h3></mat-card-title>
                 <mat-card-subtitle><h4>{{book.course_num}} : {{book.course_desc}}</h4></mat-card-subtitle>
