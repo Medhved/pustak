@@ -3,8 +3,21 @@
 </mat-toolbar>
 <p></p>
 
+<div fxLayout="column" fxLayoutGap="5px">
+    <mat-accordion displayMode="default" [multi]="true"
+                   [hideToggle]="false">
+        <mat-expansion-panel [hideToggle]="false" *ngFor="let subj of subjects">
+            <mat-expansion-panel-header>{{subj | uppercase}}</mat-expansion-panel-header>
+             Panel body
+            <mat-action-row>
+                <button mat-button (click)="onAction(event)">Action1</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
 <div fxLayout="row wrap" fxLayoutGap="5">
-    <div *ngFor='let book of books' fxFlex="25">
+    <div *ngFor='let book of books' fxFlex="33">
         <mat-card style="height:95%; background-color: #eeeeee;">
             <mat-card-header>
                 <mat-card-title><h3>{{book.subject}}</h3></mat-card-title>

@@ -14,6 +14,8 @@ import { CommonModule } from '@angular/common';
 
 import {
   MatMenuModule,
+  MatExpansionModule,
+  MatListModule,
   MatCardModule,
   MatIconModule,
   MatToolbarModule,
@@ -33,6 +35,8 @@ import { ObserversModule } from '@angular/cdk/observers';
 @NgModule({
   imports: [
     MatMenuModule,
+    MatExpansionModule,
+    MatListModule,
     MatGridListModule,
     MatCardModule,
     MatIconModule,
@@ -49,6 +53,8 @@ import { ObserversModule } from '@angular/cdk/observers';
   ],
   exports: [
     MatMenuModule,
+    MatExpansionModule,
+    MatListModule,
     MatGridListModule,
     MatCardModule,
     MatIconModule,
