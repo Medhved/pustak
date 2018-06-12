@@ -4,14 +4,16 @@
 <p></p>
 
 <div fxLayout="column" fxLayoutGap="5px">
-    <mat-accordion displayMode="default" [multi]="true"
-                   [hideToggle]="false">
-        <mat-expansion-panel [hideToggle]="false" *ngFor="let subj of subjects">
+    <mat-accordion displayMode="default" [multi]="false"
+                   [hideToggle]="true">
+        <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="filterCourses(subj)">
             <mat-expansion-panel-header>{{subj | uppercase}}</mat-expansion-panel-header>
-             Panel body
-            <mat-action-row>
-                <button mat-button (click)="onAction(event)">Action1</button>
-            </mat-action-row>
+           <ul>
+                <li *ngFor="let c of courses ">{{c}}</li>
+           </ul>
+            <!-- <mat-action-row>
+                <button mat-button (click)="filterCourses(subj)">Action1</button>
+            </mat-action-row> -->
         </mat-expansion-panel>
     </mat-accordion>
 </div>
