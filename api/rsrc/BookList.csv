@@ -14,7 +14,6 @@ History,201,Ancient History,9781457690884,TRUE,TRUE
 History,201,Ancient History,9780631217848,FALSE,FALSE
 History,201,Ancient History,9780199978458,FALSE,FALSE
 History,201,Ancient History,0872205428,FALSE,FALSE
-History,202,Medieval History,,FALSE,FALSE
 History,203,United States History,9780393930276,TRUE,FALSE
 History,203,United States History,9780393930283,TRUE,FALSE
 History,203,United States History,9780809001583,FALSE,FALSE
@@ -36,7 +35,6 @@ History,240,Empires and Nationalism,9780812991789,FALSE,FALSE
 History,245,History of Modern East Asia,9780393934519,TRUE,FALSE
 History,245,History of Modern East Asia,9780393920857,TRUE,FALSE
 History,245,History of Modern East Asia,9780395496961,TRUE,FALSE
-History,248,Modern Islamic Societies,,FALSE,FALSE
 Humanities,231,Economics,9781305280595,TRUE,TRUE
 Humanities,231,Economics,9780393352245,TRUE,TRUE
 Humanities,231,Economics,9780393337648,FALSE,FALSE
@@ -112,7 +110,6 @@ Language,358,Mandarin 4B,9780887276798,TRUE,FALSE
 Language,358,Mandarin 4B,9780887276835,TRUE,FALSE
 Science,501,Biology 1,9780133235746,TRUE,FALSE
 Science,502,Biology 2,9780321775658,TRUE,FALSE
-Science,510,Gene Expression & Regulation,,FALSE,FALSE
 Science,521,Chemistry 1 Advanced,9780078021510,TRUE,FALSE
 Science,521,Chemistry 1 Advanced,9781259286223,TRUE,FALSE
 Science,522,Chemistry 1,9780073402758,TRUE,FALSE
@@ -127,7 +124,6 @@ Science,552,Physics 1 Advanced,9780133978049,TRUE,FALSE
 Science,553,Physics 2,9780133978001,TRUE,FALSE
 Science,557,Theory of Relativity,9780486688954,TRUE,FALSE
 Science,557,Theory of Relativity,9781420946338,TRUE,FALSE
-Mathematics,601,Geometry Advanced,,FALSE,FALSE
 Mathematics,602,Geometry,9781881764069,TRUE,FALSE
 Mathematics,610,Intermediate Algebra,9781111567682,TRUE,FALSE
 Mathematics,615,Algebra 2/Precalculus Advanced,9780321644770,TRUE,FALSE

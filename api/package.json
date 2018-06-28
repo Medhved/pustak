@@ -30,7 +30,7 @@
     "joi": "^13.3.0",
     "save": "^2.3.2",
     "sequelize": "^4.37.10",
-    "sqlite": "^2.9.2",
+    "sqlite3": "^4.0.1",
     "vision": "^5.3.2"
   },
   "devDependencies": {
