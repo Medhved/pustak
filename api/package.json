@@ -23,6 +23,7 @@
   },
   "repository": "gitlab:medhved/pustak",
   "dependencies": {
+    "axios": "^0.18.0",
     "config": "^1.30.0",
     "hapi": "^17.5.0",
     "hapi-swagger": "^9.1.1",
