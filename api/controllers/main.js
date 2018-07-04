@@ -1,7 +1,9 @@
 //controllers/main.js
+const Config = require('config');
 const fs = require('fs');
 var sql3 = require('sqlite3').verbose();
 var db = new sql3.Database('pusztak.db');
+const axios = require('axios');
 var controller = {};
 
 
@@ -9,7 +11,74 @@ module.exports = (function () {
     return controller;
 }());
 
-controller.getBookList = function (request, h) {
+controller.importBookDetails = function(request, h) {
+    return new Promise(function(resolve, reject){
+        db.all('SELECT isbn FROM books WHERE title IS null LIMIT 50', async function (err, data) {
+            if (err) {
+                reject(err);
+            }
+            console.log(data);
+            resolve(getDetails(data));
+        });
+    });
+}
+
+async function getDetails(data){
+    let bookDetails = [];
+    for(let el of data){
+        let url = `${Config.get('google.base_url')}q=isbn:${el.isbn}&key=${Config.get('google.books_key')}`;
+        url += `&fields=items(id,volumeInfo(title,authors,publisher,publishedDate,description,pageCount,imageLinks/thumbnail),searchInfo/textSnippet)`;
+        try {
+            await axios.get(url).then(function(response){
+                if(response.data.items){
+                    addBookDetails2Db(el.isbn, response.data.items[0]);
+                    bookDetails.push(response.data.items[0]);
+                }
+            })
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    return bookDetails;
+}
+
+function addBookDetails2Db(isbn_num, details){
+    // Author related info
+    let dbAuthorStr = '';
+    const combineAuthors = (authString, currVal) => authString + '; ' + currVal;
+    if(details.volumeInfo.authors){
+        dbAuthorStr = details.volumeInfo.authors.reduce(combineAuthors);
+        console.log(dbAuthorStr);
+    }
+
+    let cover_url = '';
+    if (details.volumeInfo.imageLinks.thumbnail){
+        cover_url = details.volumeInfo.imageLinks.thumbnail;
+    } else cover_url = null;
+
+    // text snippet
+    let textSnip = '';
+    if(details.searchInfo){ textSnip = details.searchInfo.textSnippet; };
+    
+
+    db.run(`UPDATE books 
+            SET google_books_id = $id, title = $title, author = $author, cover = $cover, description = $description, num_pages = $num_pages, publisher = $publisher, publish_date = $publish_date, text_snippet = $text_snippet
+            WHERE isbn = ${isbn_num} `, {
+                $id: details.id,
+                $title: details.volumeInfo.title,
+                $author: dbAuthorStr,
+                $cover: details.volumeInfo.imageLinks.thumbnail, 
+                $description: details.volumeInfo.description, 
+                $num_pages: details.volumeInfo.pageCount, 
+                $publisher: details.volumeInfo.publisher, 
+                $publish_date: details.volumeInfo.publishedDate, 
+                $text_snippet: textSnip
+            }
+        )
+        return;
+}
+
+controller.importBookList = function (request, h) {
 
     return new Promise(function (resolve, reject) {
         fs.readFile(__dirname + '/../rsrc/BookList.csv', 'utf8', (err, data) => {
