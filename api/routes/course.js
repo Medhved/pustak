@@ -2,13 +2,34 @@
 
 const controller = require('../controllers/course');
 
-module.exports = [{
+module.exports = [
+    {
+        method: 'GET',
+        path: '/subjects',
+        config: {
+            description: 'Show all Subjects',
+            notes: 'Shows all subjects',
+            tags: ['api', 'sqlite3', 'data', 'subjects', 'list']
+        },
+        handler: controller.getSubjects.bind(controller)
+    },
+    {
+        method: 'GET',
+        path: '/subject/{subject_id}/courses',
+        config: {
+            description: 'Show all courses for a particular subject',
+            notes: 'Show all courses for a particular subjects',
+            tags: ['api', 'sqlite3', 'data', 'subjects', 'courses','list']
+        },
+        handler: controller.getSubjectCourses.bind(controller)
+    },
+    {
         method: 'GET',
         path: '/courses',
         config: {
             description: 'Show all courses',
             notes: 'Shows all courses',
-            tags: ['api', 'sqlite3', 'data', 'subjects', 'list']
+            tags: ['api', 'sqlite3', 'data', 'courses', 'list']
         },
         handler: controller.getCourses.bind(controller)
     },
