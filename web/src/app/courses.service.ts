@@ -17,4 +17,8 @@ export class CoursesService {
     return this.http.get(`${API_URL}/subjects`);
   }
 
+  getCourses() {
+    return this.http.get(`${API_URL}/courses`);
+  }
+
 }

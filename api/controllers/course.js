@@ -20,7 +20,7 @@ controller.getSubjects = function(request, h) {
 
 controller.getSubjectCourses = function (request, h) {
     return new Promise(function(resolve, reject){
-        db.all(`SELECT C.* FROM subjects S, courses C, WHERE S.id=C.subject_id AND S.id = $subject_id ORDER BY C.course_num`,{
+        db.all(`SELECT C.* FROM subjects S, courses C WHERE S.id=C.subject_id AND S.id = $subject_id ORDER BY C.course_num`,{
             $subject_id: request.params.subject_id
         }, function(err, data){
             if(err) reject(err);

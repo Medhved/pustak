@@ -5,14 +5,11 @@
 
 <div fxLayout="column" fxLayoutGap="5px">
   <mat-accordion displayMode="default" [multi]="false" [hideToggle]="true">
-    <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="filterCourses(subj)">
+    <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="getCourseList(subj.subject_name)">
       <mat-expansion-panel-header>{{subj.subject_name | uppercase}}</mat-expansion-panel-header>
-      <!-- <ul>
-        <li *ngFor="let c of courses ">{{c}}</li>
-      </ul>
-      <!-- <mat-action-row>
-                <button mat-button (click)="filterCourses(subj)">Action1</button>
-            </mat-action-row> -->
+        <ul>
+          <li *ngFor="let c of courseListBySubj[subj.subject_name]">{{c.course_num}}: {{c.course_desc}}</li>
+        </ul>
     </mat-expansion-panel>
   </mat-accordion>
 </div>
