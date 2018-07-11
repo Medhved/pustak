@@ -1,3 +1,4 @@
 pusztakbak.db
 api/config/development.json
 api/config/production.json
+web/src/environments/environment.prod.ts
