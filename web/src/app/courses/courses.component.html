@@ -8,8 +8,43 @@
     <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="getCourseList(subj.subject_name)">
       <mat-expansion-panel-header>{{subj.subject_name | uppercase}}</mat-expansion-panel-header>
         <ul>
-          <li *ngFor="let c of courseListBySubj[subj.subject_name]">{{c.course_num}}: {{c.course_desc}}</li>
+          <li *ngFor="let c of courseListBySubj[subj.subject_name]" (click)="getBookList(c.course_num)">{{c.course_num}}: {{c.course_desc}}</li>
         </ul>
     </mat-expansion-panel>
   </mat-accordion>
-</div>
+
+  <mat-card *ngFor="let b of bookList" style="max-width:33%">
+      <mat-card-header>
+          <mat-card-title>{{b.title}}</mat-card-title>
+          <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
+      </mat-card-header>
+      <img src="{{b.cover}}">
+      <mat-card-content>
+          Text content
+      </mat-card-content>
+      <mat-card-actions align="start">
+          <button mat-button (click)="onAction1">Action1</button>
+          
+      </mat-card-actions>
+      <mat-card-footer>
+          Footer
+      </mat-card-footer>
+  </mat-card>
+
+  <!-- <mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let b of bookList">
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px"> 
+        <div fxFlex="20%">
+          <img src="{{b.cover}}" alt="{{b.title}}">
+        </div>
+        <div>
+          {{b.title}}
+        </div>
+        
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list> -->
+<div >
+  
+
+

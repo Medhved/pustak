@@ -10,6 +10,7 @@ export class CoursesComponent implements OnInit {
 
   subjects;
   courses;
+  bookList = [];
   courseListBySubj = {};
 
   constructor(private courseService: CoursesService) { }
@@ -17,6 +18,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit() {
     this.courseService.getSubjects().subscribe((data: any) => {this.subjects = data; });
     this.courseService.getCourses().subscribe((data: any) => { this.courses = data; });
+    this.courseService.getBooks(106).subscribe((data: any) => { this.bookList = data; });
   }
 
   getCourseList = (subj) => {
@@ -33,6 +35,14 @@ export class CoursesComponent implements OnInit {
       });
       this.courseListBySubj[subj] = filteredList;
     }
+  }
+
+  getBookList = (courseNum) => {
+    console.log(courseNum);
+    this.courseService.getBooks(courseNum).subscribe((data: any) => {
+      console.log(data);
+      this.bookList = data;
+    });
   }
 
 }
