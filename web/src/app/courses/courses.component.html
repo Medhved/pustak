@@ -1,50 +1,50 @@
-<mat-toolbar>
+<mat-toolbar style="border: 1px;">
   <h4>Current Booklist</h4>
 </mat-toolbar>
-<p></p>
 
-<div fxLayout="column" fxLayoutGap="5px">
-  <mat-accordion displayMode="default" [multi]="false" [hideToggle]="true">
-    <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="getCourseList(subj.subject_name)">
-      <mat-expansion-panel-header>{{subj.subject_name | uppercase}}</mat-expansion-panel-header>
-        <ul>
-          <li *ngFor="let c of courseListBySubj[subj.subject_name]" (click)="getBookList(c.course_num)">{{c.course_num}}: {{c.course_desc}}</li>
-        </ul>
-    </mat-expansion-panel>
-  </mat-accordion>
 
-  <mat-card *ngFor="let b of bookList" style="max-width:33%">
-      <mat-card-header>
-          <mat-card-title>{{b.title}}</mat-card-title>
-          <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
-      </mat-card-header>
-      <img src="{{b.cover}}">
-      <mat-card-content>
-          Text content
-      </mat-card-content>
-      <mat-card-actions align="start">
-          <button mat-button (click)="onAction1">Action1</button>
-          
-      </mat-card-actions>
-      <mat-card-footer>
-          Footer
-      </mat-card-footer>
-  </mat-card>
+<div class="container"
+fxLayout
+fxLayout.xs="row"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="50%">
+     <mat-accordion displayMode="default" [multi]="false" [hideToggle]="true">
+      <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="getCourseList(subj.subject_name)">
+        <mat-expansion-panel-header>{{subj.subject_name | uppercase}}</mat-expansion-panel-header>
+          <ul>
+            <li *ngFor="let c of courseListBySubj[subj.subject_name]" (click)="getBookList(c.course_num)">{{c.course_num}}: {{c.course_desc}}</li>
+          </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="item item-2" fxFlex="50%">
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center"
+        fxLayoutGap="10px"
+        fxLayoutGap.xs="0">
+          <div class="item item-1" fxFlex="100%" *ngFor="let b of bookList" >
+            <mat-card>
+              <mat-card-content>
+                <div fxLayout="row">
+                  <div class="item" fxFlex="25%"><img src="{{b.cover}}" style="height: 72px;"></div>
+                  <div class="item" fxFlex>
+                    ISBN: {{b.isbn}} <br />
+                    Title: {{b.title}} <br />
+                    Author: {{b.author}} <br />
+                    <!-- Note: {{b.text_snippet}}<br /> -->
+                    Used ok: {{b.used_ok}} | Ebook ok: {{b.ebook_ok}}
 
-  <!-- <mat-grid-list cols="4">
-    <mat-grid-tile *ngFor="let b of bookList">
-      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px"> 
-        <div fxFlex="20%">
-          <img src="{{b.cover}}" alt="{{b.title}}">
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
         </div>
-        <div>
-          {{b.title}}
-        </div>
-        
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list> -->
-<div >
+  </div>
+</div>
   
 
 
