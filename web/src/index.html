@@ -13,17 +13,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="mat-app-background">
-  <div class="container" fxLayout="row">
-    <div fxFlex="80%" fxFlexOffset="100px">
-      <app-root></app-root>
-
+<!-- <body> -->
+    <div class="container"
+        fxLayout
+        fxLayout.xs="row"
+        fxLayoutAlign="center"
+        fxLayoutGap="10px"
+        fxLayoutGap.xs="0">
+          <div class="item item-1" fxFlex="15%"><app-root></app-root></div>
+          <div class="item item-2" fxFlex="20%" fxFlexOrder="3">2</div>
+          <div class="item item-3" fxFlex>3</div>
     </div>
-    <div fxFlex="10%">
-      
-    </div>
-      
-  </div>
-    
-  
 </body>
 </html>
