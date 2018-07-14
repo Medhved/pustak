@@ -4,11 +4,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faMinusSquare } from '@fortawesome/free-solid-svg-icons';
+
 import { HttpClientModule } from '@angular/common/http';
 import { BooklistComponent } from './booklist/booklist.component';
 
 import { MaterialModule } from './material.module';
 import { CoursesComponent } from './courses/courses.component';
+
+library.add(faCheckSquare, faMinusSquare);
 
 @NgModule({
   declarations: [
@@ -18,6 +25,7 @@ import { CoursesComponent } from './courses/courses.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,

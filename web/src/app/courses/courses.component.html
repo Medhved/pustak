@@ -1,6 +1,6 @@
-<mat-toolbar style="border: 1px;">
+<!-- <mat-toolbar style="border: 1px;">
   <h4>Current Booklist</h4>
-</mat-toolbar>
+</mat-toolbar> -->
 
 
 <div class="container"
@@ -9,7 +9,10 @@ fxLayout.xs="row"
 fxLayoutAlign="center"
 fxLayoutGap="10px"
 fxLayoutGap.xs="0">
-  <div class="item item-1" fxFlex="50%">
+  <div class="item item-1" fxFlex="30%">
+    <mat-toolbar style="border: 1px;">
+      <h4>Course List</h4>
+    </mat-toolbar>
      <mat-accordion displayMode="default" [multi]="false" [hideToggle]="true">
       <mat-expansion-panel [hideToggle]="true" *ngFor="let subj of subjects" (opened)="getCourseList(subj.subject_name)">
         <mat-expansion-panel-header>{{subj.subject_name | uppercase}}</mat-expansion-panel-header>
@@ -19,7 +22,10 @@ fxLayoutGap.xs="0">
       </mat-expansion-panel>
     </mat-accordion>
   </div>
-  <div class="item item-2" fxFlex="50%">
+  <div class="item item-2" fxFlex="35%">
+    <mat-toolbar style="border: 1px;">
+      <h4>Book List</h4>
+    </mat-toolbar>
       <div
         fxLayout="column"
         fxLayoutAlign="center"
@@ -31,18 +37,39 @@ fxLayoutGap.xs="0">
                 <div fxLayout="row">
                   <div class="item" fxFlex="25%"><img src="{{b.cover}}" style="height: 72px;"></div>
                   <div class="item" fxFlex>
-                    ISBN: {{b.isbn}} <br />
-                    Title: {{b.title}} <br />
-                    Author: {{b.author}} <br />
+                    <strong>ISBN: </strong> {{b.isbn}} <br />
+                    <strong>Title:</strong> {{b.title}} <br />
+                    <strong>Author:</strong> {{b.author}} <br />
                     <!-- Note: {{b.text_snippet}}<br /> -->
-                    Used ok: {{b.used_ok}} | Ebook ok: {{b.ebook_ok}}
-
+ 
+                    <span *ngIf="b.used_ok === 'TRUE'">
+                      <fa-icon [icon]="['fas', 'check-square']" style="color: green;"></fa-icon>
+                    </span>
+                    <span *ngIf="b.used_ok === 'FALSE'">
+                      <fa-icon [icon]="['fas', 'minus-square']" style="color: red;"></fa-icon>
+                    </span>
+                    Used Book
+                  |  
+                    <span *ngIf="b.ebook_ok === 'TRUE'">
+                      <fa-icon [icon]="['fas', 'check-square']" style="color: green;"></fa-icon>
+                    </span>
+                    <span *ngIf="b.ebook_ok === 'FALSE'">
+                      <fa-icon [icon]="['fas', 'minus-square']" style="color: red;"></fa-icon>
+                    </span>
+                    E-book
                   </div>
                 </div>
               </mat-card-content>
             </mat-card>
           </div>
         </div>
+  </div>
+  <div class="item" fxFlex="35%">
+    <mat-toolbar>
+      <h4>Reserved Books</h4>
+    </mat-toolbar>
+    
+
   </div>
 </div>
   

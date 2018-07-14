@@ -48,7 +48,8 @@ controller.getCourseBooks = function (request, h) {
             FROM books2courses BC
             INNER JOIN courses C ON BC.course_id = C.id
             INNER JOIN books B ON BC.book_id = B.isbn
-            WHERE C.course_num = $course_id;
+            WHERE C.course_num = $course_id
+            ORDER BY BC.used_ok DESC, BC.ebook_ok DESC, B.title;
         `, { $course_id: request.params.course_num},
         function(err,data){
             if(err) reject(err);
